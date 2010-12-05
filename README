@@ -1,0 +1,68 @@
+SugarSync Linux Client - EARLY ALPHA release
+
+Author: Mark Willis
+Email: Mark.w@immat.co.uk
+
+Welcome to my sugar sync client. Below are details on how to use.
+Please be aware this code is still buggy and missing some important functionality.
+There are comments through most of the codebase but some of it may not make sense / be quite messy.
+It does need a bit of a clean
+
+REQUIREMENTS
+	php iNotify (src provided)
+	Built on php 5.3.2
+	MySql 5.0+
+
+OPTIONAL REQUIREMENTS:
+	notify-send - http://ubuntuforums.org/showthread.php?t=1411620
+
+INSTALLATION
+
+iNotify src is provided but it is also available through pear:
+
+	sudo aptitude install php5-dev pear
+	sudo pecl install channel://pecl.php.net/inotify-0.1.4
+
+Update setup.conf with the required setting for MySQL and your sugar sync account
+path_to_sync/path_to_tmp need to be absolute paths
+
+Create a mysql database and run the install_db.sql script
+
+After further development the program will run as a daemon but for now it is just through the commandline so you can run the program "singleshot.sh"
+
+for example:
+$: ./singleshot.sh
+
+
+All output is sent to the debug.log file for debugging.
+
+Things still not working:
+	File DELETE/RENAME
+	** This just requires more code being added to account for the iNotify actions
+
+	Downloading new files once program running
+	** We need to iterate through the entire sugarsync account looking for any updated timestamps / not excisting in our database.
+	   This could cause a load issue?
+
+
+Things that do work:
+	File Creation/Moving into sync folder
+	** This works whilst the program is not running (and detected on startup)
+	   and whilst program is running (by iNotify)
+
+	Shared Account Monitoring
+	** If you have access to another accounts shared folders these will also be downloaded into the sync directory
+
+
+TODO
+Lots of bug testing
+
+High Priority:
+	Convert MySQL to SQLite
+	Add Delete File code
+	Add File Renaming Code
+
+Low Priority
+	Change config loading statements to a loop, reduce duplication
+
+If you would like to contribute please drop me an email.

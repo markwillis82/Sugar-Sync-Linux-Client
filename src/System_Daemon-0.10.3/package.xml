@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package packagerversion="1.9.0" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.0     http://pear.php.net/dtd/package-2.0.xsd">
+ <name>System_Daemon</name>
+ <channel>pear.php.net</channel>
+ <summary>Turn PHP scripts into Linux daemons</summary>
+ <description>System_Daemon is a PHP class that allows developers to create their own daemon 
+applications on Linux systems. The class is focussed entirely on creating &amp; 
+spawning standalone daemons, and for example includes:
+
+   1. Methods to generate OS-specific startup-files (init.d) (currently only 
+      Debian/Ubuntu are supported), so that your application gets started on 
+      reboot as well.
+   2. Methods for logging purposes, also support for PEAR&apos;s Log package 
+   3. Simple syntax
+   5. Can run with or without PEAR (PEAR adds more elegance &amp; functionality, 
+      no-PEAR offers functionality like including system_daemon with svn:externals
+      and reduced dependencies)
+   6. Default signal handlers, but optionally reroute signals to your own 
+      handlers. 
+   7. Set options like max RAM usage</description>
+ <lead>
+  <name>Kevin van Zonneveld</name>
+  <user>kvz</user>
+  <email>kevin@vanzonneveld.net</email>
+  <active>yes</active>
+ </lead>
+ <date>2010-05-04</date>
+ <time>14:15:16</time>
+ <version>
+  <release>0.10.3</release>
+  <api>0.10.3</api>
+ </version>
+ <stability>
+  <release>beta</release>
+  <api>beta</api>
+ </stability>
+ <license uri="http://opensource.org/licenses/bsd-license.php">New BSD License</license>
+ <notes>
+System_Daemon v0.10.3-beta 
+ * Increased PHP5.3 Compatibility
+ * Initialize options when needed. Fixes #17296
+ * Newlines were accidentally single quoted (thanks Chris Sternal-Johnson)
+ </notes>
+ <contents>
+  <dir baseinstalldir="/" name="/">
+   <file baseinstalldir="/" md5sum="b1606407f7cb041d71739b11d2ba8a8b" name="data/template_BSD" role="data" />
+   <file baseinstalldir="/" md5sum="b1474b05b696e50378bf529fc5007ba5" name="data/template_Debian" role="data" />
+   <file baseinstalldir="/" md5sum="94912a39afa982ae61d436ec8f4c56da" name="data/template_Fedora" role="data" />
+   <file baseinstalldir="/" md5sum="94912a39afa982ae61d436ec8f4c56da" name="data/template_RedHat" role="data" />
+   <file baseinstalldir="/" md5sum="8b185cc9627534e2c72d309708f71d36" name="docs/BUILD" role="doc" />
+   <file baseinstalldir="/" md5sum="a910958b233a7cced2033355916e9940" name="docs/CHANGELOG" role="doc" />
+   <file baseinstalldir="/" md5sum="8b9de80c6483064404a979fee832b385" name="docs/DESCRIPTION" role="doc" />
+   <file baseinstalldir="/" md5sum="466edb5aedc1d1df832f4787df4854c2" name="docs/MAINTAINERS" role="doc" />
+   <file baseinstalldir="/" md5sum="14dd3401f492cdf5397e352e5219640e" name="docs/NOTES" role="doc" />
+   <file baseinstalldir="/" md5sum="fffc2a3c131eeb29ae24850fbedd0314" name="docs/README" role="doc" />
+   <file baseinstalldir="/" md5sum="4f87665219d0eada37cddc4c0e317ea8" name="docs/SUMMARY" role="doc" />
+   <file baseinstalldir="/" md5sum="ed8f9770601bcdaaa74b3a1dbc49e673" name="docs/VERSION" role="doc" />
+   <file baseinstalldir="/" md5sum="bb5aaff523708b65feeb66104fbe7efe" name="examples/bug_test_a.php" role="doc" />
+   <file baseinstalldir="/" md5sum="aab5ad1ed70e15acbaaff2e6e9547cae" name="examples/bug_test_b.php" role="doc" />
+   <file baseinstalldir="/" md5sum="484a6d4800b97bc0cacd3049ab0765ea" name="examples/bug_test_c.php" role="doc" />
+   <file baseinstalldir="/" md5sum="25598b655b3cff01ebe7d90174e87d18" name="examples/custtemplate.php" role="doc" />
+   <file baseinstalldir="/" md5sum="44206a150a499eed97b5934e093f1959" name="examples/devtest.php" role="doc" />
+   <file baseinstalldir="/" md5sum="8b73fba218887b0da7a2c56783a51a11" name="examples/logparser.php" role="doc" />
+   <file baseinstalldir="/" md5sum="6bce9183d9f3cdc17028b6be4e223de0" name="examples/nopear.php" role="doc" />
+   <file baseinstalldir="/" md5sum="8c7bcb4866e167431858e7950abb7fd9" name="examples/pearlog.php" role="doc" />
+   <file baseinstalldir="/" md5sum="41e92f706a462af589831e6cfd0acc2e" name="examples/phperrtest.php" role="doc" />
+   <file baseinstalldir="/" md5sum="499f8c5c6f39d1bb5915b288421588dc" name="examples/signals.php" role="doc" />
+   <file baseinstalldir="/" md5sum="ac9d8689e7d63aeb2fc5be7c2296672b" name="examples/simple.php" role="doc" />
+   <file baseinstalldir="/" md5sum="02f42b58010a4997da83829e8b127889" name="System/Daemon/OS/BSD.php" role="php" />
+   <file baseinstalldir="/" md5sum="39eba2162223b31646ef4b5868f9fef0" name="System/Daemon/OS/Debian.php" role="php" />
+   <file baseinstalldir="/" md5sum="f784a398dfd11e3cbc6f52e499db7c51" name="System/Daemon/OS/Exception.php" role="php" />
+   <file baseinstalldir="/" md5sum="606cedbc5a651751000ea83a9039633c" name="System/Daemon/OS/Fedora.php" role="php" />
+   <file baseinstalldir="/" md5sum="8d2200294ea5e5c051bc0b9da83b1a72" name="System/Daemon/OS/Linux.php" role="php" />
+   <file baseinstalldir="/" md5sum="3a07ef9dca955cb06147b766fd6d4bf1" name="System/Daemon/OS/RedHat.php" role="php" />
+   <file baseinstalldir="/" md5sum="e44f070f9cc46bf24846d82574b15772" name="System/Daemon/OS/Ubuntu.php" role="php" />
+   <file baseinstalldir="/" md5sum="da3f5657241b98a199733f8246ab4ba9" name="System/Daemon/OS/Windows.php" role="php" />
+   <file baseinstalldir="/" md5sum="5fdd19be9df00654e33d3bd83a8559df" name="System/Daemon/Exception.php" role="php" />
+   <file baseinstalldir="/" md5sum="b81b8656f39e0319438e5226c240f62e" name="System/Daemon/Options.php" role="php" />
+   <file baseinstalldir="/" md5sum="8b75216ae327c15d74b266ebac4d5e3b" name="System/Daemon/OS.php" role="php" />
+   <file baseinstalldir="/" md5sum="ea8be1b809350ff2a51681de63f3fa9d" name="System/Daemon.php" role="php" />
+   <file baseinstalldir="/" md5sum="61742192799746015a8a4c6450b2880d" name="tests/inbackground.phpt" role="test" />
+   <file baseinstalldir="/" md5sum="f2ad571aa09f6f1cffa0b95278cea21c" name="tests/log.phpt" role="test" />
+   <file baseinstalldir="/" md5sum="68d5c5ae658ff3f7a7c81c303a5dfddf" name="tests/os-determine.phpt.diff" role="test" />
+   <file baseinstalldir="/" md5sum="eccbc87e4b5ce2fe28308fd9f2a7baf3" name="tests/os-determine.phpt.exp" role="test" />
+   <file baseinstalldir="/" md5sum="1cc23367cbbcb52ad8b91f39059b02b4" name="tests/os-determine.phpt.log" role="test" />
+   <file baseinstalldir="/" md5sum="c81e728d9d4c2f636f067f89cc14862c" name="tests/os-determine.phpt.out" role="test" />
+   <file baseinstalldir="/" md5sum="fb412e493ebfc41d8ba9a05d4064be0b" name="tests/os-determine.phpt.php" role="test" />
+   <file baseinstalldir="/" md5sum="0e759b9f41688ce5dccfcb5673271bed" name="tests/os-getdetails.phpt" role="test" />
+   <file baseinstalldir="/" md5sum="efad1cf53b7506536a049eb003ea3d77" name="tests/tests-config.php" role="test" />
+   <file baseinstalldir="/" md5sum="cbf20190d6c12035469ee8005f2a95c9" name="README.md" role="php" />
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.1.2</min>
+   </php>
+   <pearinstaller>
+    <min>1.4.0</min>
+   </pearinstaller>
+  </required>
+  <optional>
+   <package>
+    <name>Log</name>
+    <channel>pear.php.net</channel>
+    <min>1.0</min>
+   </package>
+  </optional>
+ </dependencies>
+ <phprelease>
+  <installconditions>
+   <os>
+    <name>(*ix|*ux|darwin*|*BSD|SunOS*)</name>
+   </os>
+  </installconditions>
+ </phprelease>
+ <phprelease />
+ <changelog>
+  <release>
+   <version>
+    <release>0.10.3</release>
+    <api>0.10.3</api>
+   </version>
+   <stability>
+    <release>beta</release>
+    <api>beta</api>
+   </stability>
+   <date>2010-05-04</date>
+   <license uri="http://opensource.org/licenses/bsd-license.php">New BSD License</license>
+   <notes>
+System_Daemon v0.10.3-beta 
+ * Increased PHP5.3 Compatibility
+ * Initialize options when needed. Fixes #17296
+ * Newlines were accidentally single quoted (thanks Chris Sternal-Johnson)
+   </notes>
+  </release>
+ </changelog>
+</package>

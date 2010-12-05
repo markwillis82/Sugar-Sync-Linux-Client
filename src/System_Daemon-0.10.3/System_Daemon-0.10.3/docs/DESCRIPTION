@@ -1,0 +1,15 @@
+System_Daemon is a PHP class that allows developers to create their own daemon 
+applications on Linux systems. The class is focussed entirely on creating & 
+spawning standalone daemons, and for example includes:
+
+   1. Methods to generate OS-specific startup-files (init.d) (currently only 
+      Debian/Ubuntu are supported), so that your application gets started on 
+      reboot as well.
+   2. Methods for logging purposes, also support for PEAR's Log package 
+   3. Simple syntax
+   5. Can run with or without PEAR (PEAR adds more elegance & functionality, 
+      no-PEAR offers functionality like including system_daemon with svn:externals
+      and reduced dependencies)
+   6. Default signal handlers, but optionally reroute signals to your own 
+      handlers. 
+   7. Set options like max RAM usage

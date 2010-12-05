@@ -1,0 +1,4 @@
+System_Daemon 0.10.3-beta 2010-05-04 Kevin van Zonneveld <kevin@vanzonneveld.net>
+ * Increased PHP5.3 Compatibility
+ * Initialize options when needed. Fixes #17296
+ * Newlines were accidentally single quoted (thanks Chris Sternal-Johnson)

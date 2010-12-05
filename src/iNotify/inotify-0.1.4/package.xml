@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE package SYSTEM "http://pear.php.net/dtd/package-1.0">
+<package version="1.0" packagerversion="1.7.2">
+ <name>inotify</name>
+ <summary>Inotify</summary>
+ <description>The inotify extension allows to use inotify functions in a PHP script.
+ </description>
+ <maintainers>
+  <maintainer>
+   <user>lbarnaud2</user>
+   <name>Arnaud Le Blanc</name>
+   <email>arnaud.lb@gmail.com</email>
+   <role>lead</role>
+  </maintainer>
+  </maintainers>
+ <release>
+  <version>0.1.4</version>
+  <date>2009-05-19</date>
+  <license>PHP License</license>
+  <state>beta</state>
+  <notes>* Repackage
+  </notes>
+  <deps>
+   <dep type="php" rel="ge" version="5.2.0"/>
+  </deps>
+  <filelist>
+   <file role="test" md5sum="b904d6d0d966d04080282d473aec742c" name="tests/002.phpt"/>
+   <file role="src" md5sum="d278559d7af35f0207777375b5cc96e9" name="config.m4"/>
+   <file role="doc" md5sum="9503bc24ddc39eeeb67ef95304aab132" name="CREDITS"/>
+   <file role="doc" md5sum="d41d8cd98f00b204e9800998ecf8427e" name="EXPERIMENTAL"/>
+   <file role="src" md5sum="ed155dd151ef6b29b9f151f92606f4bf" name="inotify.c"/>
+   <file role="php" md5sum="155f6c7316cff3f12da669b81ee0f16c" name="inotify.php"/>
+   <file role="doc" md5sum="0e964e9273c606c46afbd311b5ad4d77" name="LICENSE"/>
+   <file role="src" md5sum="423d6034c8f0971e7c13325556621ee7" name="php_inotify.h"/>
+   <file role="doc" md5sum="9477c6c5c484ea6ea0d2560369834cc5" name="README"/>
+   <file role="php" md5sum="23a36451db200914675821bf1fac2f57" name="tail.php"/>
+  </filelist>
+ </release>
+</package>
