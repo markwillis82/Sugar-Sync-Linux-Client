@@ -10,6 +10,9 @@ It does need a bit of a clean
 
 REQUIREMENTS
 	php iNotify (src provided)
+	php-pcntl
+	php-posix (need to confirm?)
+	php-mysql
 	Built on php 5.3.2
 	MySql 5.0+
 
@@ -61,7 +64,16 @@ High Priority:
 	Convert MySQL to SQLite
 	Add Delete File code
 	Add File Renaming Code
-
+	
+	Better file detection within database lookups - Need to check the whole folder route, not just parent folder.
+	For Example:
+		/testA/FolderA/newfolder/file1.txt
+		/testA/FolderB/newfolder/file1.txt
+		
+	A command to check the existance of file1.txt will fail on the second attempt as it will find it in FolderA
+	(fix somewhere in xml.class.php)
+	
+	
 Low Priority
 	Change config loading statements to a loop, reduce duplication
 

@@ -192,11 +192,12 @@ class curl {
         curl_setopt($ch, CURLOPT_PUT, 1); 
         curl_setopt($ch, CURLOPT_INFILE, $fp);
         curl_setopt($ch, CURLOPT_INFILESIZE, $size); 
-         
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+
         curl_setopt($ch,CURLOPT_NOPROGRESS,false);
 //        curl_setopt($ch,CURLOPT_PROGRESSFUNCTION,'curl_progress');
 
-         curl_exec($ch);
+        $res = curl_exec($ch);
          if(curl_error ( $ch)) {
             return false;
          }
@@ -206,9 +207,35 @@ class curl {
         if(DBUS_NOTIFY) {
             dbus_message("File Uploaded: ".$this->db->escape($filename));
         }
-        return 1;
+        return $res ;
     }
     
+    
+    function delete_file($file_url) {
+         $ch = curl_init();
+            
+        $headers[CURLOPT_HTTPHEADER] = array('Connection: close','Content-type: application/xml','Authorization: '. AUTH_CODE);
+        curl_setopt_array($ch, $headers);
+
+        
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "DELETE");
+        curl_setopt($ch, CURLOPT_HEADER, true); // Display headers
+        curl_setopt($ch, CURLOPT_VERBOSE, 1); 
+        curl_setopt($ch, CURLOPT_URL, $file_url);
+
+         curl_exec($ch);
+         if(curl_error ( $ch)) {
+            return false;
+         }
+         curl_close($ch);
+    
+        // send notifications
+        if(DBUS_NOTIFY) {
+            dbus_message("File Deleted: ".$this->db->escape($file_url));
+        }
+        return 1;
+    }
+
     function get_header($key,$data) {
         $parts = explode("\n",$data);
         foreach($parts as $line) {
@@ -231,13 +258,13 @@ class curl {
 
     function clean_url ($v) {
                         //this is url debug code checking MD5 hashes of the header
-                        System_Daemon::log(System_Daemon::LOG_INFO,"");
+/*                        System_Daemon::log(System_Daemon::LOG_INFO,"");
                         System_Daemon::log(System_Daemon::LOG_INFO,"\t-->original: ".md5($v));
                         System_Daemon::log(System_Daemon::LOG_INFO,"\t-->trim: ".md5(trim($v)));
                         System_Daemon::log(System_Daemon::LOG_INFO,"\t-->preg_replace: ".md5(preg_replace("[^a-zA-Z\:\/]","",$v))."-".preg_replace("[^a-zA-Z\:\/]","",$v));
                         System_Daemon::log(System_Daemon::LOG_INFO,"\t-->str_replace_r_n: ".md5(str_replace(array("\r","\n"),"",$v)));
                         System_Daemon::log(System_Daemon::LOG_INFO,"\t-->All: ".md5(trim(preg_replace("[^a-zA-Z\:\/]","",str_replace(array("\r","\n"),"",$v))))."-".preg_replace("[^a-zA-Z\:\/]","",str_replace(array("\r","\n"),"",$v)));
-                        
+*/                        
                         $v = trim(preg_replace("[^a-zA-Z\:\/]","",str_replace(array("\r","\n"),"",$v)));
                         return $v;
     }
@@ -256,6 +283,6 @@ function curl_progress($download_size, $downloaded, $upload_size, $uploaded) {
     }
 
 //    echo $str;
-    return $str;
+    return ;//$str;
 }
 ?>

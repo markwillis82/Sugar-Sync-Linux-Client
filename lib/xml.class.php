@@ -528,6 +528,87 @@ class xml {
             tee($file_loc);
         
     }
+    
+    function rename_file($from_folder,$from,$to_folder,$to) {
+            tee("Renaming from: $from_folder -> $from");
+            tee("Renaming to: $to_folder -> $to");
+            
+            $from_top_folder = end(explode("/",$from_folder));
+            $to_top_folder = end(explode("/",$to_folder));
+            
+            $q = "SELECT files . * , folders.name AS folder
+                    FROM `files` , folders
+                    WHERE folders.folder_id = files.folder_id
+                    AND files.name LIKE '$from'
+                    AND folders.name LIKE '$from_top_folder' ";
+            /*** This may cause an issue if the same file exists in 2 folders of the same name in 2 different parents **/
+            $res = $this->db->query($q);
+            if($res) {
+                $from_details = $res->next();
+//                print_r($from_details);
+                $from_url = $from_details->s_id;
+                
+                $this->_xml_writer->openMemory();
+                $this->_xml_writer->startDocument('1.0','UTF-8');
+                $this->_xml_writer->startElement("file");
+        
+                    $this->_xml_writer->startElement("displayName");
+                        $this->_xml_writer->text($to);
+                    $this->_xml_writer->endElement();
+        
+                    $this->_xml_writer->startElement("mediaType");
+                        $this->_xml_writer->text(_mime_content_type($to_folder."/".$to)); // file has already changed by the time this runs
+                        
+                    $this->_xml_writer->endElement();
+
+                $this->_xml_writer->endElement();
+                $fnc_request = $this->_xml_writer->outputMemory(true);
+            
+                $fp = fopen('.tmp_file_rename', 'w');
+                fwrite($fp, $fnc_request );
+                fclose($fp);
+
+                $output = $this->curl->upload_file('.tmp_file_rename', $from_url);
+                unlink (".tmp_file_rename");
+                //print_r($output);
+                //$location = str_replace(array("\n","\r"),"",$this->curl->get_header("Location",$this->curl->post()));
+                $to = $this->db->escape($to);
+                $q = "UPDATE files SET name = '$to' WHERE s_id = '$from_url'";
+                $this->db->query($q);
+                tee("File Renamed: $from_folder/$from -> $to_folder/$to");
+            } else {
+                tee("Cannot find file to rename");
+                tee("From: $from_folder -> $from");
+            }
+    }
+
+    function delete_file($delete_file,$delete_folder) {
+            tee("Deleting: $delete_folder -> $delete_file");
+            
+            $delete_top_folder = end(explode("/",$delete_folder));
+            
+            $q = "SELECT files . * , folders.name AS folder
+                    FROM `files` , folders
+                    WHERE folders.folder_id = files.folder_id
+                    AND files.name LIKE '$delete_file'
+                    AND folders.name LIKE '$delete_top_folder' ";
+            /*** This may cause an issue if the same file exists in 2 folders of the same name in 2 different parents **/
+            $res = $this->db->query($q);
+            if($res) {
+                $from_details = $res->next();
+//                print_r($from_details);
+                $from_url = $from_details->s_id;
+                
+                $output = $this->curl->delete_file($from_url);
+
+                $q = "DELETE FROM  files WHERE s_id = '$from_url'";
+                $this->db->query($q);
+
+                tee("File Deleted: $delete_folder -> $delete_file");
+            } else {
+                tee("Cannot find file to delete");
+            }
+    }
 }
 
 ?>

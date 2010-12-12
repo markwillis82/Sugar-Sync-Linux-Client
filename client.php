@@ -128,7 +128,7 @@ $cnt = 1;
 
 
 /*********************** Main system loop *************/
-while (!System_Daemon::isDying() && $runningOkay && $cnt <=50) { /** Limit to 50 recursions for the moment **/
+while (!System_Daemon::isDying() && $runningOkay && $cnt <=100) { /** Limit to 50 recursions for the moment **/
     
     /** sugarsync client bits
      * This is where we need to setup
@@ -140,33 +140,65 @@ while (!System_Daemon::isDying() && $runningOkay && $cnt <=50) { /** Limit to 50
 		System_Daemon::info("iNotify Event Found");
 		// Read events
                 $events = $inotify->read_events();
+                /** we need to modify this to loop to group events into a cookie key array then see what is inside each item,
+                 * to decide what we want to do with the data.
+                 * This means we can work out if a rename event occurs (delete -> move_in) without deleting data
+                 *
+                 **/
+                $cookie_based_events = array();
+                
                 foreach($events as $event) {
                     
                     System_Daemon::info("Mask: ".$inotify->get_mask_type($event["mask"]));
                     System_Daemon::info("Event Dir: ".$inotify->get_event_dir($event["wd"]));
                     print_r ($event);
-                    
-                    switch($event["mask"]) {
-                        case 8: # write finished - upload fine
-                        case 128: # File moved in (drag/drop) - upload fine
-                            System_Daemon::info("Write File: ".$inotify->get_mask_type($event["mask"]));
-                            $xml->check_upload_new_file($event["name"],$inotify->get_event_dir($event["wd"]));
-                            
-                        break;
+                    $cookie_based_events[$event["cookie"]][] = $event;
+                }
+                
+                foreach($cookie_based_events as $cookie_events) { // loop through a cookie - detect type of event
 
-                        /** Rename File **/
+                    /** Rename Files:
+                     *  are a combination of a "delete" then a "move_in"
+                     *  This could be improved by using the "cookie" value of the events list
+                     *  and send a file name request to sugarsync rather than a delete and an upload (as this could be dreadful with large files)
+                    **/
+
+                    if(count($cookie_events) == 2) { # should only be needed for rename events
+                        $from_folder = $inotify->get_event_dir($cookie_events[0]["wd"]);
+                        $from = $cookie_events[0]["name"];
                         
-                        /** Delete File **/
-                        case 64:
-                        case 512:
-                            System_Daemon::info("Delete File - TODO: ".$inotify->get_mask_type($event["mask"]));
-                        default:
-                            System_Daemon::info("No Action Taken");
-                        break;
+                        $to_folder = $inotify->get_event_dir($cookie_events[1]["wd"]);
+                        $to = $cookie_events[1]["name"];
+                        $xml->rename_file($from_folder,$from,$to_folder,$to);
+                        
+                        
+                    } else {
+                        foreach($cookie_events as $event) {
+                            switch($event["mask"]) {
+                                case 8: # write finished - upload fine
+                                case 128: # File moved in (drag/drop) - upload fine
+                                    System_Daemon::info("Write File: ".$inotify->get_mask_type($event["mask"]));
+                                    $xml->check_upload_new_file($event["name"],$inotify->get_event_dir($event["wd"]));
+                                    
+                                break;
+        
+                                /** Delete File **/
+                                case 64:
+                                case 512:
+                                    System_Daemon::info("Delete File - TODO: ".$inotify->get_mask_type($event["mask"]));
+                                    $xml->delete_file($event["name"],$inotify->get_event_dir($event["wd"]));
+                                break;
+                                default:
+                                    System_Daemon::info("No Action Taken");
+                                break;
+                            }
+                        }
                     }
                 }
 	} else {
-		System_Daemon::info("Sleep ($cnt)");
+//		System_Daemon::info("Sleep ($cnt)");
+		System_Daemon::info("$cnt) Checking for updates from server - requires a bit more testing");
+                //$xml->recurse_download($user_data_xml);
 	}
     
     
