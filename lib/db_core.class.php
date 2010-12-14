@@ -50,16 +50,6 @@ class db_core
         $this->connect();
     }
     
-    public function get_dyk() {
-        $q = "SELECT * FROM newsletter_dyk";
-        $obj = $this->query($q);
-        if(!$obj) {
-            return false;
-        } else {
-            return $obj->next()->dy_know;
-        }
-    }
-    
     public function obj_array($obj) {
         if(!$obj) {
             return false;
@@ -92,11 +82,19 @@ class db_core
         return vsprintf($strQueryTemplate, $arrArguments);
     }
 
-    protected function connect(){
-        $this->dbconn=mysql_connect($this->host,$this->user,$this->pass);
-        mysql_select_db($this->db_name,$this->dbconn);
-//        mysql_query('SET NAMES UTF8');
-//        mysql_query('SET CHARACTER_SET UTF8');
+    function connect(){
+        if(!$this->dbconn) {
+            $this->dbconn=@mysql_connect($this->host,$this->user,$this->pass);
+            if(!$this->dbconn) {
+                return false;
+            }
+            mysql_select_db($this->db_name,$this->dbconn);
+    //        mysql_query('SET NAMES UTF8');
+    //        mysql_query('SET CHARACTER_SET UTF8');
+            return $this->dbconn;
+        } else {
+            return $this->dbconn;
+        }
     }
 
     public function query($q){

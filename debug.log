@@ -3633,3 +3633,234 @@
 [Dec 12 21:22:15]     info: Folder does not exist - create new file
 [Dec 12 21:22:15]     info: File Already Exists - Update: Selection_005.png
 [Dec 12 21:22:15]     info: Upload File: Selection_005.png
+[Dec 14 09:02:10]     info: Cannot find db_user - exiting
+[Dec 14 09:02:10]     info: Clean up...
+[Dec 14 09:02:10]     info: Exiting
+[Dec 14 09:02:10]     info: Stopping sugarsyncclient
+[Dec 14 09:02:10]     info: Process was not daemonized yet, just halting current process
+[Dec 14 19:34:15]     info: Cannot find db_user - exiting
+[Dec 14 19:34:15]     info: Clean up...
+[Dec 14 19:34:15]     info: Exiting
+[Dec 14 19:34:15]     info: Stopping sugarsyncclient
+[Dec 14 19:34:15]     info: Process was not daemonized yet, just halting current process
+[Dec 14 19:34:49]     info: Setup
+[Dec 14 19:34:49]     info: Get Authorisation
+[Dec 14 19:34:51]     info: No Auth Code - Ending
+[Dec 14 19:34:56]     info: Setup
+[Dec 14 19:34:56]     info: Get Authorisation
+[Dec 14 19:34:58]     info: Get user details
+[Dec 14 19:38:13]     info: Setup
+[Dec 14 19:38:13]     info: Get Authorisation
+[Dec 14 19:38:14]     info: Get user details
+[Dec 14 19:38:15]     info: User: markwillis82
+[Dec 14 19:38:15]     info: Usage: 4/307200Mb
+[Dec 14 19:38:15]     info: Get 'syncfolders'
+[Dec 14 19:38:16]     info: Get Magic Briefcase
+[Dec 14 19:38:17]     info: Making sync folder for Magic Briefcase
+[Dec 14 19:38:17]     info: Get Contents
+[Dec 14 19:38:18]     info: Recurse Folders Inside Magic Briefcase
+[Dec 14 19:38:18]     info: Create Local: /home/mark/sugarsync/syncdir/Magic Briefcase/family pics
+[Dec 14 19:38:18]     info: Get Parent: Magic Briefcase
+[Dec 14 19:38:19]     info: Current dir:Magic Briefcase/family pics/
+[Dec 14 19:38:19]     info: Check File: Magic Briefcase/family pics/states.jpg
+[Dec 14 19:38:19]     info: 	Download file:
+[Dec 14 19:38:19]     info: file: /home/mark/sugarsync/tmp/.states.jpg.tmp
+[Dec 14 19:38:19]     info: File not opened
+[Dec 14 19:38:58]     info: Setup
+[Dec 14 19:38:58]     info: Get Authorisation
+[Dec 14 19:38:59]     info: Get user details
+[Dec 14 19:39:00]     info: User: markwillis82
+[Dec 14 19:39:00]     info: Usage: 4/307200Mb
+[Dec 14 19:39:00]     info: Run initial upload
+[Dec 14 19:39:00]     info: Get 'syncfolders'
+[Dec 14 19:39:01]     info: Get Magic Briefcase
+[Dec 14 19:39:02]     info: Making sync folder for Magic Briefcase
+[Dec 14 19:39:02]     info: Get Contents
+[Dec 14 19:39:12]     info: Setup
+[Dec 14 19:39:12]     info: Get Authorisation
+[Dec 14 19:39:13]     info: Get user details
+[Dec 14 19:39:14]     info: User: markwillis82
+[Dec 14 19:39:14]     info: Usage: 4/307200Mb
+[Dec 14 19:39:14]     info: Run initial upload
+[Dec 14 19:39:14]     info: Get 'syncfolders'
+[Dec 14 19:39:15]     info: Get Magic Briefcase
+[Dec 14 19:39:28]     info: Setup
+[Dec 14 19:39:28]     info: Get Authorisation
+[Dec 14 19:39:29]     info: Get user details
+[Dec 14 19:39:30]     info: User: markwillis82
+[Dec 14 19:39:30]     info: Usage: 4/307200Mb
+[Dec 14 19:39:30]     info: Run initial upload
+[Dec 14 19:39:30]     info: Get 'syncfolders'
+[Dec 14 19:39:31]     info: Get Magic Briefcase
+[Dec 14 19:39:32]     info: Get Contents
+[Dec 14 19:39:33]     info: Recurse Folders Inside Magic Briefcase
+[Dec 14 19:39:33]     info: Current dir:Magic Briefcase/family pics/
+[Dec 14 19:39:33]     info: Check File: Magic Briefcase/family pics/states.jpg
+[Dec 14 19:39:33]     info: 2010-09-05T08:07:58.000-07:00 - 1283699278 - 1292188684
+[Dec 14 19:39:33]     info: 	Source File Newer - Potential Upload?
+[Dec 14 19:39:33]     info: Check File: Magic Briefcase/family pics/40730_449565257250_592622250_5884055_692191_n.jpg
+[Dec 14 19:39:33]     info: 2010-12-05T12:04:52.000-08:00 - 1291579492 - 1292188684
+[Dec 14 19:39:33]     info: 	Source File Newer - Potential Upload?
+[Dec 14 19:39:34]     info: Current dir:Magic Briefcase/FolderA/
+[Dec 14 19:39:35]     info: Current dir:Magic Briefcase/FolderB/
+[Dec 14 19:39:35]     info: Get Files In Magic Briefcase
+[Dec 14 19:39:35]     info: Get Mobile Photos
+[Dec 14 19:39:36]     info: Get Contents
+[Dec 14 19:39:37]     info: Recurse Folders Inside Mobile Photos
+[Dec 14 19:39:37]     info: Get Files In Mobile Photos
+[Dec 14 19:39:37]     info: Get Contacts
+[Dec 14 19:39:38]     info: Get Contents
+[Dec 14 19:39:39]     info: Recurse Folders Inside Contacts
+[Dec 14 19:39:39]     info: Get Files In Contacts
+[Dec 14 19:39:39]     info: Get 'receivedShares'
+[Dec 14 19:39:40]     info: Get Owner Info
+[Dec 14 19:39:41]     info: Allowed to read folder - add to db + download
+[Dec 14 19:39:41]     info: Get Paul_Taylor_401588
+[Dec 14 19:39:42]     info: Get Contents
+[Dec 14 19:39:43]     info: Recurse Folders Inside Paul_Taylor_401588
+[Dec 14 19:39:43]     info: Create Local: /home/mark/Projects/sugarsync_v2/syncdir/Shares/Paul_Taylor_401588/Magic Briefcase
+[Dec 14 19:39:43]     info: Get Parent: Paul_Taylor_401588
+[Dec 14 19:39:44]     info: Current dir:Shares/Paul_Taylor_401588/Magic Briefcase/
+[Dec 14 19:39:45]     info: Current dir:Shares/Paul_Taylor_401588/Magic Briefcase/Sample Documents/
+[Dec 14 19:39:45]     info: Check File: Shares/Paul_Taylor_401588/Magic Briefcase/Sample Documents/Guía de Inicio Rápido de SugarSync.pdf
+[Dec 14 19:39:45]     info: 2010-06-30T09:17:53.000-07:00 - 1277914673 - 1292188702
+[Dec 14 19:39:45]     info: 	Source File Newer - Potential Upload?
+[Dec 14 19:39:45]     info: Check File: Shares/Paul_Taylor_401588/Magic Briefcase/Sample Documents/SugarSync Kurzanleitung.pdf
+[Dec 14 19:39:45]     info: 2010-06-30T09:17:53.000-07:00 - 1277914673 - 1292188705
+[Dec 14 19:39:45]     info: 	Source File Newer - Potential Upload?
+[Dec 14 19:39:45]     info: Check File: Shares/Paul_Taylor_401588/Magic Briefcase/Sample Documents/SugarSync Quick Start Guide.pdf
+[Dec 14 19:39:45]     info: 2010-06-30T09:17:53.000-07:00 - 1277914673 - 1292188709
+[Dec 14 19:39:45]     info: 	Source File Newer - Potential Upload?
+[Dec 14 19:39:45]     info: Check File: Shares/Paul_Taylor_401588/Magic Briefcase/Sample Documents/SugarSync User's Guide.pdf
+[Dec 14 19:39:45]     info: 2010-06-30T09:17:53.000-07:00 - 1277914673 - 1292188772
+[Dec 14 19:39:45]     info: 	Source File Newer - Potential Upload?
+[Dec 14 19:39:45]     info: Check File: Shares/Paul_Taylor_401588/Magic Briefcase/Sample Documents/SugarSync クイックスタートガイド.pdf
+[Dec 14 19:39:45]     info: 2010-06-30T09:17:53.000-07:00 - 1277914673 - 1292188776
+[Dec 14 19:39:45]     info: 	Source File Newer - Potential Upload?
+[Dec 14 19:39:45]     info: Check File: Shares/Paul_Taylor_401588/Magic Briefcase/Sample Documents/SugarSync 快速入门指南.pdf
+[Dec 14 19:39:45]     info: 2010-06-30T09:17:53.000-07:00 - 1277914673 - 1292188780
+[Dec 14 19:39:45]     info: 	Source File Newer - Potential Upload?
+[Dec 14 19:39:46]     info: Current dir:Shares/Paul_Taylor_401588/Magic Briefcase/Sample Music/
+[Dec 14 19:39:46]     info: Check File: Shares/Paul_Taylor_401588/Magic Briefcase/Sample Music/Absence.m4a
+[Dec 14 19:39:46]     info: 2010-06-30T09:17:53.000-07:00 - 1277914673 - 1292188807
+[Dec 14 19:39:46]     info: 	Source File Newer - Potential Upload?
+[Dec 14 19:39:46]     info: Check File: Shares/Paul_Taylor_401588/Magic Briefcase/Sample Music/Before You Leave.m4a
+[Dec 14 19:39:46]     info: 2010-06-30T09:17:53.000-07:00 - 1277914673 - 1292188815
+[Dec 14 19:39:46]     info: 	Source File Newer - Potential Upload?
+[Dec 14 19:39:46]     info: Check File: Shares/Paul_Taylor_401588/Magic Briefcase/Sample Music/Everything Behind.m4a
+[Dec 14 19:39:46]     info: 2010-06-30T09:17:53.000-07:00 - 1277914673 - 1292188828
+[Dec 14 19:39:46]     info: 	Source File Newer - Potential Upload?
+[Dec 14 19:39:46]     info: Check File: Shares/Paul_Taylor_401588/Magic Briefcase/Sample Music/See Everything.m4a
+[Dec 14 19:39:46]     info: 2010-06-30T09:17:53.000-07:00 - 1277914673 - 1292188835
+[Dec 14 19:39:46]     info: 	Source File Newer - Potential Upload?
+[Dec 14 19:39:46]     info: Check File: Shares/Paul_Taylor_401588/Magic Briefcase/Sample Music/She Lives With Me.m4a
+[Dec 14 19:39:46]     info: 2010-06-30T09:17:53.000-07:00 - 1277914673 - 1292188848
+[Dec 14 19:39:46]     info: 	Source File Newer - Potential Upload?
+[Dec 14 19:39:46]     info: Check File: Shares/Paul_Taylor_401588/Magic Briefcase/Sample Music/Sweet Emily.m4a
+[Dec 14 19:39:46]     info: 2010-06-30T09:17:53.000-07:00 - 1277914673 - 1292188857
+[Dec 14 19:39:46]     info: 	Source File Newer - Potential Upload?
+[Dec 14 19:39:46]     info: Check File: Shares/Paul_Taylor_401588/Magic Briefcase/Sample Music/What Can I Say (Intro).m4a
+[Dec 14 19:39:46]     info: 2010-06-30T09:17:53.000-07:00 - 1277914673 - 1292188864
+[Dec 14 19:39:46]     info: 	Source File Newer - Potential Upload?
+[Dec 14 19:39:48]     info: Current dir:Shares/Paul_Taylor_401588/Magic Briefcase/Sample Photos/
+[Dec 14 19:39:48]     info: Check File: Shares/Paul_Taylor_401588/Magic Briefcase/Sample Photos/Bondi Beach.jpg
+[Dec 14 19:39:48]     info: 2010-06-30T09:17:53.000-07:00 - 1277914673 - 1292188868
+[Dec 14 19:39:48]     info: 	Source File Newer - Potential Upload?
+[Dec 14 19:39:48]     info: Check File: Shares/Paul_Taylor_401588/Magic Briefcase/Sample Photos/Brazil - Lagoa.jpg
+[Dec 14 19:39:48]     info: 2010-06-30T09:17:53.000-07:00 - 1277914673 - 1292188871
+[Dec 14 19:39:48]     info: 	Source File Newer - Potential Upload?
+[Dec 14 19:39:48]     info: Check File: Shares/Paul_Taylor_401588/Magic Briefcase/Sample Photos/Buenos Aires - La Boca.jpg
+[Dec 14 19:39:48]     info: 2010-06-30T09:17:53.000-07:00 - 1277914673 - 1292188875
+[Dec 14 19:39:48]     info: 	Source File Newer - Potential Upload?
+[Dec 14 19:39:48]     info: Check File: Shares/Paul_Taylor_401588/Magic Briefcase/Sample Photos/Fishermen near Janitzio.jpg
+[Dec 14 19:39:48]     info: 2010-06-30T09:17:53.000-07:00 - 1277914673 - 1292188877
+[Dec 14 19:39:48]     info: 	Source File Newer - Potential Upload?
+[Dec 14 19:39:48]     info: Check File: Shares/Paul_Taylor_401588/Magic Briefcase/Sample Photos/Golden Gate Bridge.jpg
+[Dec 14 19:39:48]     info: 2010-06-30T09:17:53.000-07:00 - 1277914673 - 1292188879
+[Dec 14 19:39:48]     info: 	Source File Newer - Potential Upload?
+[Dec 14 19:39:48]     info: Check File: Shares/Paul_Taylor_401588/Magic Briefcase/Sample Photos/San Francisco.jpg
+[Dec 14 19:39:48]     info: 2010-06-30T09:17:53.000-07:00 - 1277914673 - 1292188883
+[Dec 14 19:39:48]     info: 	Source File Newer - Potential Upload?
+[Dec 14 19:39:48]     info: Check File: Shares/Paul_Taylor_401588/Magic Briefcase/Sample Photos/Waterfall - Iguazu.jpg
+[Dec 14 19:39:48]     info: 2010-06-30T09:17:53.000-07:00 - 1277914673 - 1292188885
+[Dec 14 19:39:48]     info: 	Source File Newer - Potential Upload?
+[Dec 14 19:39:48]     info: Check File: Shares/Paul_Taylor_401588/Magic Briefcase/Sample Photos/Yosemite - El Capitan.jpg
+[Dec 14 19:39:48]     info: 2010-06-30T09:17:53.000-07:00 - 1277914673 - 1292188888
+[Dec 14 19:39:48]     info: 	Source File Newer - Potential Upload?
+[Dec 14 19:39:48]     info: Check File: Shares/Paul_Taylor_401588/Magic Briefcase/Sample Photos/Yosemite - Half Dome.jpg
+[Dec 14 19:39:48]     info: 2010-06-30T09:17:53.000-07:00 - 1277914673 - 1292188891
+[Dec 14 19:39:48]     info: 	Source File Newer - Potential Upload?
+[Dec 14 19:39:48]     info: Current dir:Shares/Paul_Taylor_401588/Magic Briefcase/Family Pics/
+[Dec 14 19:39:48]     info: Get Owner Info
+[Dec 14 19:39:49]     info: Allowed to read folder - add to db + download
+[Dec 14 19:39:49]     info: Get noreply_theigroup_401588
+[Dec 14 19:39:50]     info: Get Contents
+[Dec 14 19:39:51]     info: Recurse Folders Inside noreply_theigroup_401588
+[Dec 14 19:39:51]     info: Create Local: /home/mark/Projects/sugarsync_v2/syncdir/Shares/noreply_theigroup_401588/Magic Briefcase
+[Dec 14 19:39:51]     info: Get Parent: noreply_theigroup_401588
+[Dec 14 19:39:52]     info: Current dir:Shares/noreply_theigroup_401588/Magic Briefcase/
+[Dec 14 19:39:53]     info: Current dir:Shares/noreply_theigroup_401588/Magic Briefcase/big share/
+[Dec 14 19:39:53]     info: Check File: Shares/noreply_theigroup_401588/Magic Briefcase/big share/Selection_005.png
+[Dec 14 19:39:53]     info: 2010-12-12T13:22:14.000-08:00 - 1292188934 - 1292188930
+[Dec 14 19:39:53]     info: 	Server File Newer - Download
+[Dec 14 19:39:53]     info: 	Download file:
+[Dec 14 19:39:53]     info: file: /home/mark/Projects/sugarsync_v2/tmp/.Selection_005.png.tmp
+[Dec 14 19:39:55]     info: Done: 11%
+[Dec 14 19:39:55]     info: Done: 22%
+[Dec 14 19:39:55]     info: Done: 33%
+[Dec 14 19:39:55]     info: Done: 45%
+[Dec 14 19:39:55]     info: Done: 50%
+[Dec 14 19:39:55]     info: Done: 62%
+[Dec 14 19:39:55]     info: Done: 73%
+[Dec 14 19:39:56]     info: Done: 84%
+[Dec 14 19:39:56]     info: Done: 90%
+[Dec 14 19:39:56]     info: Done: 100%
+[Dec 14 19:39:56]     info: File Successfully Downloaded: Selection_005.png
+[Dec 14 19:39:56]     info: 	File Downloaded
+[Dec 14 19:39:56]     info: Added watch: 1 -> /home/mark/Projects/sugarsync_v2/syncdir/
+[Dec 14 19:39:56]     info: Added watch: 2 -> /home/mark/Projects/sugarsync_v2/syncdir/Contacts
+[Dec 14 19:39:56]     info: Added watch: 3 -> /home/mark/Projects/sugarsync_v2/syncdir/Magic Briefcase
+[Dec 14 19:39:56]     info: Added watch: 4 -> /home/mark/Projects/sugarsync_v2/syncdir/Magic Briefcase/FolderA
+[Dec 14 19:39:56]     info: Added watch: 5 -> /home/mark/Projects/sugarsync_v2/syncdir/Magic Briefcase/FolderB
+[Dec 14 19:39:56]     info: Added watch: 6 -> /home/mark/Projects/sugarsync_v2/syncdir/Magic Briefcase/family pics
+[Dec 14 19:39:56]     info: Added watch: 7 -> /home/mark/Projects/sugarsync_v2/syncdir/Mobile Photos
+[Dec 14 19:39:56]     info: Added watch: 8 -> /home/mark/Projects/sugarsync_v2/syncdir/Shares
+[Dec 14 19:39:56]     info: Added watch: 9 -> /home/mark/Projects/sugarsync_v2/syncdir/Shares/Paul_Taylor_401588
+[Dec 14 19:39:56]     info: Added watch: 10 -> /home/mark/Projects/sugarsync_v2/syncdir/Shares/Paul_Taylor_401588/Magic Briefcase
+[Dec 14 19:39:56]     info: Added watch: 11 -> /home/mark/Projects/sugarsync_v2/syncdir/Shares/Paul_Taylor_401588/Magic Briefcase/Family Pics
+[Dec 14 19:39:56]     info: Added watch: 12 -> /home/mark/Projects/sugarsync_v2/syncdir/Shares/Paul_Taylor_401588/Magic Briefcase/Sample Documents
+[Dec 14 19:39:56]     info: Added watch: 13 -> /home/mark/Projects/sugarsync_v2/syncdir/Shares/Paul_Taylor_401588/Magic Briefcase/Sample Music
+[Dec 14 19:39:56]     info: Added watch: 14 -> /home/mark/Projects/sugarsync_v2/syncdir/Shares/Paul_Taylor_401588/Magic Briefcase/Sample Photos
+[Dec 14 19:39:56]     info: Added watch: 15 -> /home/mark/Projects/sugarsync_v2/syncdir/Shares/noreply_theigroup_401588
+[Dec 14 19:39:56]     info: Added watch: 16 -> /home/mark/Projects/sugarsync_v2/syncdir/Shares/noreply_theigroup_401588/Magic Briefcase
+[Dec 14 19:39:56]     info: Added watch: 17 -> /home/mark/Projects/sugarsync_v2/syncdir/Shares/noreply_theigroup_401588/Magic Briefcase/big share
+[Dec 14 19:39:56]     info: 1) Checking for updates from server - requires a bit more testing
+[Dec 14 19:39:58]     info: 2) Checking for updates from server - requires a bit more testing
+[Dec 14 19:40:00]     info: 3) Checking for updates from server - requires a bit more testing
+[Dec 14 19:40:02]     info: 4) Checking for updates from server - requires a bit more testing
+[Dec 14 19:40:04]     info: iNotify Event Found
+[Dec 14 19:40:04]     info: Mask: delete
+[Dec 14 19:40:04]     info: Event Dir: /home/mark/Projects/sugarsync_v2/syncdir/Shares/Paul_Taylor_401588/Magic Briefcase/Sample Photos
+[Dec 14 19:40:04]     info: Delete File - TODO: delete
+[Dec 14 19:40:04]     info: Deleting: /home/mark/Projects/sugarsync_v2/syncdir/Shares/Paul_Taylor_401588/Magic Briefcase/Sample Photos -> Bondi Beach.jpg
+[Dec 14 19:40:05]     info: File Deleted: /home/mark/Projects/sugarsync_v2/syncdir/Shares/Paul_Taylor_401588/Magic Briefcase/Sample Photos -> Bondi Beach.jpg
+[Dec 14 19:40:07]     info: 6) Checking for updates from server - requires a bit more testing
+[Dec 14 19:40:09]     info: 7) Checking for updates from server - requires a bit more testing
+[Dec 14 19:45:36]     info: Setup
+[Dec 14 19:45:36]     info: Error pm db
+[Dec 14 19:46:30]     info: Setup
+[Dec 14 19:46:30]     info: Error pm db
+[Dec 14 19:46:59]     info: Setup
+[Dec 14 19:46:59]     info: Error pm db
+[Dec 14 19:47:44]     info: Setup
+[Dec 14 19:47:55]     info: Setup
+[Dec 14 19:47:55]     info: Error pm db
+[Dec 14 19:48:16]     info: Setup
+[Dec 14 19:48:16]     info: Error pm db
+[Dec 14 19:48:51]     info: Setup
+[Dec 14 19:48:51]     info: Cannot connect to database - check privileges/database name
+[Dec 14 19:50:15]     info: Cannot find db_user - exiting
+[Dec 14 19:50:15]     info: Clean up...
+[Dec 14 19:50:15]     info: Exiting
+[Dec 14 19:50:15]     info: Stopping sugarsyncclient
+[Dec 14 19:50:15]     info: Process was not daemonized yet, just halting current process

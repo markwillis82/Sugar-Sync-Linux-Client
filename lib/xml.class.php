@@ -599,7 +599,26 @@ class xml {
 //                print_r($from_details);
                 $from_url = $from_details->s_id;
                 
-                $output = $this->curl->delete_file($from_url);
+//                $output = $this->curl->delete_file($from_url);
+                
+                /* MOVE FILE TO DELETED FOLDER RATHER THEN "DELETE" HTTP REQUEST */
+                $this->_xml_writer->openMemory();
+                $this->_xml_writer->startDocument('1.0','UTF-8');
+                $this->_xml_writer->startElement("file");
+        
+                    $this->_xml_writer->startElement("parent");
+                        $this->_xml_writer->text(DELETE_URL);
+                    $this->_xml_writer->endElement();
+        
+                $this->_xml_writer->endElement();
+                $fnc_request = $this->_xml_writer->outputMemory(true);
+            
+                $fp = fopen('.tmp_file_rename', 'w');
+                fwrite($fp, $fnc_request );
+                fclose($fp);
+
+                $output = $this->curl->upload_file('.tmp_file_rename', $from_url);
+                unlink (".tmp_file_rename");
 
                 $q = "DELETE FROM  files WHERE s_id = '$from_url'";
                 $this->db->query($q);

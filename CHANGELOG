@@ -1,4 +1,9 @@
+[2010-12-14]
+	Modified delete code to move file to "Deleted Files" rather then permenantly delete. this allows for file restore
+	Added some better database checking - better error message when it cannot connect to the database
+	
+
 [2010-12-12]
-    Added rename / delete file functionality and 
+	Added rename / delete file functionality and 
 
 ALPHA - Initial Release

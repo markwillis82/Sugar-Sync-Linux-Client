@@ -100,6 +100,13 @@ $xml = new xml();
 $db = db::getInstance();
 $inotify = inotify::getInstance();
 
+// Test database connection - improve error messages
+if(!$db->connect()) {
+    tee("Cannot connect to database - check privileges/database name");
+    die;
+}
+
+
 // We don't need to download these folders as they are archives of older files or been deleted
 $xml->ignore_folders = array(
     "Deleted Files",
@@ -124,8 +131,10 @@ System_Daemon::info("Get user details");
 
 $user_data_xml = simplexml_load_string($xml->get_user());
 
+define("DELETE_URL", $user_data_xml->deleted);
+
 //print_r($user_data_xml);
-//die;
+
 System_Daemon::info("User: ".$user_data_xml->nickname);
 System_Daemon::info("Usage: ".calc_usage($user_data_xml->quota->usage)."/" . calc_usage($user_data_xml->quota->limit)."Mb");
 
