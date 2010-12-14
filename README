@@ -28,8 +28,11 @@ iNotify src is provided but it is also available through pear:
 
 Update setup.conf with the required setting for MySQL and your sugar sync account
 path_to_sync/path_to_tmp need to be absolute paths
+path_to_tmp needs to exist and be writable by the user
 
 Create a mysql database and run the install_db.sql script
+
+
 
 After further development the program will run as a daemon but for now it is just through the commandline so you can run the program "singleshot.sh"
 
