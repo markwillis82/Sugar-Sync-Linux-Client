@@ -28,11 +28,11 @@ iNotify src is provided but it is also available through pear:
 
 Update setup.conf with the required setting for MySQL and your sugar sync account
 path_to_sync/path_to_tmp need to be absolute paths
-<<<<<<< HEAD
+
 I've added tmp files into folders so git will commit them.
-=======
+
 path_to_tmp needs to exist and be writable by the user
->>>>>>> a1a4a0b1c4325bc3c691dae7612c02c8f33135e8
+
 
 Create a mysql database and run the install_db.sql script
 
